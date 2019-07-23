@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+.header{
+	width: 100%;
+	height: 170px;
+	position: relative;
+	/*background:url(背景.PNG) center no-repeat;*/
+}
+.channel {
+    width: 100%;
+    height: 42px;
+    position: relative;
+    z-index: 220;
+}
+.nav-channel{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 42px;
+	background:hsla(0,0%,100%,.4);
+	box-shadow: 0 1px 2px rgba(0,0,0,.1)
+}
+
+.color{
+	height: 100%;
+	background:url(背景.PNG) center -10px no-repeat;
+	z-index: 100px;
+	filter: blur(4px);
+}
+.nav-wrapper{
+	width: 980px;
+	margin:0 auto;
+	height: 42px;
+}
+.nav-wrapper .fl{
+	float: left;
+	position: relative;
+	height: 42px;
+	font-size: 12px;
+}
+ul{
+	list-style: none;
+	padding: 0;
+    
+}
+.main-channel{
+    height: 42px;
+}
+a{
+	text-decoration: none;
+	position: relative;
+	display: block;
+
+}
+.header .t{
+	color: black;
+	height: 100%;
+    padding: 0 7px;
+}
+.header .nav-item{
+	float: left;
+    text-align: center;
+    height: 100%;
+    line-height: 42px;
+    position: relative;
+}
+.header .nav-item .logo{
+	width: 24px;
+	height: 24px;
+	position: absolute;
+	padding-top: 8px;
+	display: inline-block;
+}
+.header .aaa{
+	padding-left: 25px;
+
+}
+li:hover{
+	background:hsla(0,0%,100%,.4);
+}
+
+.youxizx{
+	z-index: 300;
+	display: none;
+	position: absolute;
+	width:466px;
+	height: 256px;
+	background:white;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+}
+
+span.czzj {
+    color: white;
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    width: 216px;
+    left: 0;
+    text-align: left;
+    height: 30px;
+    padding: 0 12px;
+    line-height: 30px;
+    text-shadow: 1px 1px 1px #000;
+    box-shadow: -1 1 -1 3 black;
+    box-shadow: 0px -14px 10px 0px #000000b8 inset;
+}
+#yxzx:hover .youxizx{
+	display: block;
+	animation: first 0.3s;
+}
+@keyframes first{
+	0%{top:47px;}
+	100%{top:42px;}
+}
+.youxizx-left{
+	width: 265px;
+	background-color: white;
+	margin-top: 12px;
+	height: 244px;
+	float: left;
+}
+.youxitu1{
+	width: 240px;
+	height: 128px;
+	position: relative;
+	margin-left: 12px;
+	margin-bottom: 6px;
+}
+.yxzt{
+	position: absolute;
+    display: block;
+    font-size: 14px;
+    color: black;
+    bottom: 0;
+    width: 64px;
+}
+.yxlj{
+	float: left;
+    padding: 6px 10px 0;
+    position: relative;
+	height: 104px;
+	display: block;
+}
+.yxlj a{
+	height: 100%;
+}
+.youxizx-left li:hover{
+	background:#a1a9a940;
+}
+
+.youxizx-right{
+	width: 201px;
+    margin: 12px 0 0 0;
+    background: url(line.PNG) no-repeat;
+    float: left;
+    height: 244px;
+}
+.all{
+	background:url(title.PNG) no-repeat;
+	padding:35px 0 0 6px;
+}
+.all a{
+	height: 28px;
+	width: 100%;
+	padding-left: 16px;
+	font-size: 12px;
+	line-height: 28px;
+	display:block;
+	text-align: left;
+	color: black;
+}
+.all a span{
+	width: 13em;
+	height: 28px;
+	display: block;
+	line-height: 28px;
+	overflow: hidden;
+}
+.all li{
+	width: 100%;
+	height: 28px;
+}
+.all li:hover{
+	color: blue;
+	background-color:#a1a9a940;
+}
+.all a:hover{
+	color: #35a8bbf0;
+}
+.hidden-imgs{
+	width: 220px;
+	height: 220px;
+	display: none;
+	position: absolute;
+	left: 442px;
+	bottom: 0;
+}
+.hidden-img1{
+	background:url(11.PNG) no-repeat;
+	display: none;
+}
+.hidden-img2{
+	background:url(22.PNG) no-repeat;
+	display: none;
+}
+.hidden-img3{
+	background:url(33.PNG) no-repeat;
+	display: none;
+}
+.hidden-img4{
+	background:url(44.PNG) no-repeat;
+	display: none;
+}
+.hidden-img5{
+	background:url(55.PNG) no-repeat;
+	display: none;
+}
+.hidden-img6{
+	background:url(66.PNG) no-repeat;
+	display: none;
+}
+.hidden-img7{
+	background:url(77.PNG) no-repeat;
+	display: none;
+}
+.appear-img1:hover .hidden-imgs{
+	display: block;
+}
+.appear-img2:hover .hidden-imgs{
+	display: block;
+}
+.appear-img3:hover .hidden-imgs{
+	display: block;
+}
+.appear-img4:hover .hidden-imgs{
+	display: block;
+}
+.appear-img5:hover .hidden-imgs{
+	display: block;
+}
+.appear-img6:hover .hidden-imgs{
+	display: block;
+}
+.appear-img7:hover .hidden-imgs{
+	display: block;
+}
+img.phone {
+    width: 24px;
+    /* height: 18px; */
+    position: absolute;
+    top: 11px;
+}
+span.aaa1 {
+    padding-left: 20px;
+}
+.download{
+	display: none;
+	position: absolute;
+	width: 259px;
+    height: 174px;
+    top: 42px;
+    left: -20px;
+    background:url(下载背景.PNG) no-repeat;
+}
+.xiazai{
+	position: absolute;
+	top:30px;
+	width: 97px;
+	height: 97px;
+	display: inline-block;
+	left:82px;
+}
+#sjxz:hover .download{
+	display: block;
+	animation: first 0.3s;
+}
+
+.BML{
+	position: absolute;
+	display: none;
+	width:375px;
+	padding: 12px;
+	background-color: white;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+.BML a:first-child{
+    margin-bottom: 12px
+}
+.BML a{
+	height: 110px;
+}
+.BML span{
+	position: absolute;
+    color: #fff;
+    left: 0;
+    bottom: 0;
+    width: 375px;
+    line-height: 24px;
+    padding-left: 10px;
+    border-radius: 4px;
+    text-align: left;
+    box-sizing: border-box;
+    background: linear-gradient(transparent,rgba(0,0,0,.6))
+}
+#bml:hover .BML{
+	display: block;
+	animation: first 0.3s;
+}
+.fr{
+	position: relative;
+	float:right;
+	height: 100%;
+
+}
+.nav-right {
+	position: relative;
+    line-height: 42px;
+    float: left;
+    color: black;
+    padding: 0 7px;
+}
+.nav-right a {
+    height: 100%;
+    font-size: 12px;
+}
+.nav-right img {
+    height: 32px;
+    border-radius: 5rem;
+    vertical-align: middle;
+}
+.nav-right-last {
+    position: relative;
+    height: 46px;
+    width: 68px;
+    background-color: #f45a8d;
+    border-radius: 0 0 6px 6px;
+    text-align: center;
+    padding: 0;
+    margin-left: 8px;
+}
+.nav-right-last a{
+	/*background-color: #f45a8d;*/
+    border-radius: 0 0 6px 6px;
+    text-align: center;
+    padding: 0;
+    color: white;
+}
+.history{
+	position: absolute;
+	width: 400px;
+	right: -58px;
+    background-color: white;
+    z-index: 2001;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    border-radius: 0 0 4px 4px;
+    display: none;
+}
+.txt{
+	font-size: 14px;
+    color: #222;
+    width: 215px;
+    margin: 0 auto 12px;
+    line-height: normal;
+    text-align: center;
+    padding-top: 28px;
+}
+.history-load{
+	color: #fff;
+    line-height: normal;
+    text-align: center;
+    background-color: #00a1d6;
+    padding: 5px 11px;
+    border-radius: 4px;
+    position: relative;
+    z-index: 201;
+    width: 25px;
+    margin: 20px auto 10px;
+}
+.list{
+	padding-top: 10px;
+}
+.no-data{
+	text-align: center;
+    color: #aaa;
+    line-height: 28px;
+    font-size: 12px;
+}
+a.more1 {
+    background-color: #e5e9ef;
+    color: black;
+    text-align: center;
+    border: 1px;
+    margin: 4px 12px 12px 12px;
+    line-height: 28px;
+    border-radius: 4px;
+}
+#hover-history:hover .history{
+	display: block;
+	animation: first 0.3s;
+}
+.up-nav{
+	position: absolute;
+	width: 340px;
+	right: 0;
+	top:42px;
+	background-color: white;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+    border-radius: 0 0 4px 4px;
+    z-index: 1;
+    display: none;
+}
+.up-nav li{
+	width: 68px;
+	height: 64px;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+	position: relative;
+	transition: 2s;
+}
+.up-nav li:hover{
+	background-color:#a1a9a940;
+}
+.up-nav li:hover i{
+	top: -3px;
+}
+.up-nav li a {
+    color: #f25d8e;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.up-nav li a i{
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-repeat: round;
+    margin: 15px auto 2px;
+    position: relative;
+    transition: 2s;
+}
+.tougao{
+	background: url(投稿.PNG);
+}
+.tougao1{
+	background: url(音频.PNG);
+}
+.tougao2{
+	background: url(视频.PNG);
+}
+.tougao3{
+	background: url(管理.PNG);
+}
+.tougao4{
+	background: url(投稿.PNG);
+}
+span.tt {
+    top: -12px;
+    width: 100%;
+    position: relative;
+}
+#hover-tg:hover .up-nav{
+	display: block;
+	animation: first 0.3s;
+}
+.hiddenzb{
+	width: 504px;
+	position: absolute;
+	padding: 20px 0 20px 20px;
+	background-color: white;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .4);
+	display: none;
+}
+#hover-zb:hover .hiddenzb{
+	display: block;
+	animation: first 0.3s;
+}
+.hiddenzb h1{
+	color: #ea759f;
+	font-size: 14px;
+	margin: 0;
+	line-height: 19px;
+	text-align: left;
+
+}
+.room-list{
+	font-size: 12px;
+	margin-top: 5px;
+	border-right: 1px solid #eaeaea;
+}
+.list-item{
+    width: 64px;
+    position: relative;
+    margin: 10px 17px 0 0;
+    display: inline-block;
+}
+.list-item:hover .hhhhover{
+    display: block;
+    animation: seccond 0.3s forwards;
+}
+.list-item img {
+    width: 64px;
+    border-radius: 2rem;
+    display: block;
+}
+.hhhh{
+	float: left;
+	width: 254px;
+}
+.hhhhover{
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(0,0,0,.5);
+    font-size: 15px;
+    color: #fff;
+    font-weight: 700;
+    width: 64px;
+    height: 64px;
+    border-radius: 2rem;
+    line-height: 64px;
+    text-indent: 15px;
+    display: none;
+}
+@keyframes seccond{
+	from {-webkit-transform: scale(0.5);
+                transform: scale(0.5);}
+    to{-webkit-transform: scale(1);
+                transform: scale(1);}
+}
+.hhhhover:before{
+	content: "";
+	position: absolute;
+	top: 27px;
+	left: 8px;
+	width: 12px;
+	height: 12px;
+	background-color:#ff699e;
+	border-radius: 2rem; 
+}
+.uname{
+    margin: 3px 0 0 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: black;
+    white-space: nowrap;
+    line-height: 16px;
+}
+.tttt{
+	width: 229px;
+	padding-left: 21px;
+	float: left;
+}
+a.dd {
+    display: block;
+    padding: 10px 21px;
+    margin-left: -21px;
+    width: 208px;
+    height: 80px;
+}
+.dd img{
+	height: 80px;
+	width: 208px;
+}
+.dd:hover{
+	background-color: #a1a9a940;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search {
+    background: url(背景.PNG) center no-repeat;
+    height: 170px;
+    width: 100%;
+    z-index: 200;
+    position: relative;
+    margin-top: -42px;
+	transition: all 2s;
+}
+.search-head{
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+	height: 170px;
+}
+.head-title{
+	position: absolute;
+	top: 114px;
+	left: 255px;
+	line-height: 20px;
+	padding: 6px 10px;
+	background-color: rgba(0,0,0,.68);
+	color: white;
+	border-radius: 4px;
+	font-size: 14px;
+	display: none;
+}
+#hover-head:hover .head-title{
+	display: block;
+	animation: myfirst 0.75s;
+}
+@keyframes myfirst{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+.main-search{
+	position: absolute;
+	bottom: 20px;
+	right: 0;
+	width: 268px;
+	height: 32px;
+	padding: 2px 2px 2px 72px;
+	background-color: rgba(0,0,0,.12);
+	border-radius: 6px;
+	font-size: 12px;
+
+}
+.searchform{
+	background-color: hsla(0,0%,100%,.88);
+	display: block;
+	height: 100%;
+	border-radius: 4px;
+}
+.searchinput{
+    border: 0;
+    width: 200px;
+    background: hsla(0, 0%, 100%, 0);
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    color: #222;
+    padding: 0 12px;
+    outline: none;
+}
+.searchform:hover{
+	background-color: white;
+}
+button.searchsubmit {
+    width: 48px;
+    position: absolute;
+    height: 32px;
+    display: block;
+    right: 0;
+    bottom: -4px;
+    border: none;
+    background: url(搜索.PNG);
+    background-repeat: no-repeat;
+    background-size: 22px;
+    outline: none;
+    cursor: pointer;
+}
+button:hover{
+	background:url(搜索1.PNG);
+	background-repeat: no-repeat;
+    background-size: 22px;
+}
+.link-ranking{
+    position: absolute;
+    left: 2px;
+    height: 32px;
+    width: 68px;
+    display: block;
+    border-radius: 4px;
+    background-color: white;
+    top: 0;
+    line-height: 32px;
+    margin: 2px 0;
+    color: #f45a8d;
+}
+.link-ranking span{
+    background: url(排行榜.PNG);
+    background-size: 19px;
+    background-repeat: no-repeat;
+    padding-left: 23px;
+}
+.bili-wrapper{
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+.bilibili-nav{
+	width: 100%;
+	padding-top: 8px;
+	height: 50px;
+	margin-bottom: 1px;
+	bottom: 4px;
+}
+.menu{
+	height: 42px;
+	color: black;
+	position: relative;
+}
+.first-nav{
+	width: 24px;
+	margin-right: 8px;
+}
+.menu li{
+	text-align: center;
+	float: left;
+	position: relative;
+	display: block;
+	font-size: 12px;
+}
+.middle-nav{
+	width: 46px;
+}
+.first-nav a {
+    color: black;
+    font-size: 12px;
+    background: url(首页.PNG);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 5px;
+}
+.naw {
+    position: absolute;
+    top: 8px;
+    width: 100%;
+    text-align: center;
+    height: 14px;
+}
+.nav-name{
+    display: inline-block;
+    vertical-align: middle;
+    color: #222;
+    font-size: 12px;
+    height: 40px;
+    padding-top: 8px;
+    line-height: 50px;
+}
+.naw span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 12px;
+    color: #fff;
+    background-color: #ffafc9;
+    border-radius: 3px;
+    height: 12px;
+    line-height: 14px;
+    padding: 1px 3px;
+}
+.sub-nav{
+	position: absolute;
+	top: 44px;
+	overflow:hidden;
+	background-color: white;
+	border-radius: 0 0 4px 4px;
+	box-shadow: 0 2px 4px rgba(0,0,0,.16);
+	left: 0;
+	display: none;
+
+}
+.sub-nav li {
+    position: relative;
+    font-size: 12px;
+    line-height: 20px;
+    min-width: 120px;
+    height: auto;
+    overflow: hidden;
+    text-align: left;
+    transition: all .2s;
+    width: 100%;
+}
+.sub-nav a{
+	display: block;
+	padding: 5px 15px 5px 25px;
+	margin-right: 10px;
+	white-space: nowrap;
+	overflow: hidden;
+	transition: all 0.2s;
+	position: relative;
+	left: 0;
+	color: black;
+	background:url(小箭头.PNG);
+	background-repeat: no-repeat;
+    background-size: 15px;
+    background-position-x: 7px;
+    background-position-y: 8px;
+}
+.sub-nav img {
+    top: -1px;
+    width: 15px;
+    height: 15px;
+    position: relative;
+    left: 120px;
+    vertical-align: middle;
+}
+.sub-nav li:hover{
+	background:#a1a9a940;
+}
+.sub-nav li:hover .sub-img{
+	animation: third 0.2s forwards;
+	position: relative;
+}
+@keyframes third{
+	0%{left: 120px;}
+	100%{left: 0px;}
+}
+.sub-nav li:hover .nav-a{
+	animation: forth 0.2s forwards;
+}
+@keyframes forth{
+	0%{left: 0px;}
+	100%{left: 6px;}
+}
+.middle-nav:hover .sub-nav{
+	display: block;
+
+}
+.middle-nav:hover .nav-name{
+	color: #00a1d6;
+}
+.side-nav{
+	width: 40px;
+	margin: 0 3px;
+}
+.side-nav a{
+	background:url(专栏4.PNG);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position-x: center;
+    background-position-y: 5px;
+}
+.side-nav1 a{
+	background:url(指示牌.PNG);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position-x: center;
+    background-position-y: 5px;
+}
+.side-nav2 a{
+	background:url(直播.PNG);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position-x: center;
+    background-position-y: 5px;
+}
+.side-nav3 a{
+	background:url(直播.PNG);
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position-x: center;
+    background-position-y: 5px;
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<div class="channel">
+			<div class="color">
+			</div>
+			<div class="nav-channel">
+				<div class="nav-wrapper">
+					<div class="fl">
+						<ul class="main-channel">
+							<li class="nav-item">
+								<a href="" class="t" title="主站">
+									<img src="图标.PNG" class="logo">
+									<span class="aaa">主站
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="t" title="来探索bilibili音乐的世界吧~">
+									<span>音频
+									</span>
+								</a>
+							</li>
+							<li class="nav-item" id="yxzx">
+								<a href="" class="t" title="游戏中心">
+									<span>游戏中心
+									</span>
+								</a>
+								<div class="youxizx">
+									<div class="youxizx-left">
+										<a href="https://game.bilibili.com/finalgear/" class="youxitu1"><img src="直播图1.jpg" style="width: 240px; height: 128px;
+										border-radius: 4px"><span class="czzj">重装战甲</span></a>
+										<ul class="jjj">
+											<li class="yxlj">
+												<a href="https://game.bilibili.com/fgo/event_gudateito/" title="命运-冠位指定（Fate/GO)"><img src="直播图2.PNG" style="width: 64px; height: 64px;">
+										           <br>
+										           <span class="yxzt">命运-冠</span>
+										        </a>
+										    </li>
+										    <li class="yxlj">
+												<a href="https://game.bilibili.com/bangdream/" title="BanG Dream！"><img src="直播图4.PNG" style="width: 64px; height: 64px;">
+											        <br>
+											        <span class="yxzt">BanG</span>
+									            </a>
+										    </li>
+										    <li class="yxlj">
+												<a href="https://game.bilibili.com/xzgjsy/" title="英雄传说：星之轨迹"><img src="直播图3.PNG" style="width: 64px; height: 64px;">
+											         <br>
+											        <span class="yxzt">英雄传</span>
+										        </a>
+										    </li>
+									    </ul>
+									</div>
+									<div class="youxizx-right">
+										<ul class="all">
+											<li  class="appear-img1"><a href=""><span>无法触碰的掌心</span></a>
+												<div class="hidden-imgs hidden-img1"></div>
+											</li>
+											<li  class="appear-img2"><a href=""><span>闪耀暖暖</span></a>
+												<div class="hidden-imgs hidden-img2"></div>
+											</li>
+											<li  class="appear-img3"><a href=""><span>皇家骑士</span></a>
+												<div class="hidden-imgs hidden-img3"></div>
+											</li>
+											<li  class="appear-img4"><a href=""><span>宝石研物语</span></a>
+												<div class="hidden-imgs hidden-img4"></div>
+											</li>
+											<li  class="appear-img5"><a href=""><span>纯白魔女</span></a>
+												<div class="hidden-imgs hidden-img5"></div>
+											</li>
+											<li  class="appear-img6"><a href=""><span>我的勇者</span></a>
+												<div class="hidden-imgs hidden-img6"></div>
+											</li>
+											<li  class="appear-img7"><a href=""><span>Dead Cells</span></a>
+												<div class="hidden-imgs hidden-img7"></div>
+											</li>
+										</ul>
+										
+									</div>
+								</div>
+							</li>
+							<li class="nav-item" id="hover-zb">
+								<a href="" class="t" title="直播">
+									<span>直播
+									</span>
+								</a>
+								<div class="hiddenzb">
+									<div class="hhhh">
+										<h1>热门直播</h1>
+									    <div class="room-list">
+										<a href="" class="list-item">
+											<img src="https://i0.hdslb.com/bfs/face/5d94b9727a49815716cd66fc7ba3840382025c56.jpg@100w_100h.webp">
+											<div class="hhhhover">
+												LIVE
+											</div>
+											<p class="uname">哔哩哔哩LOL赛事直播</p>
+										</a>
+										<a href="" class="list-item">
+											<img src="https://i0.hdslb.com/bfs/face/52854c4caf446a5d95de080b35531b847c3efd4e.jpg@100w_100h.webp">
+											<div class="hhhhover">
+												LIVE
+											</div>
+											<p class="uname">哔哩哔哩LOL赛事直播</p>
+										</a>
+										<a href="" class="list-item">
+											<img src="https://i0.hdslb.com/bfs/face/6a5ce833d98ee0861217a62937c9dab514ba64b9.jpg@100w_100h.webp">
+											<div class="hhhhover">
+												LIVE
+											</div>
+											<p class="uname">哔哩哔哩LOL赛事直播</p>
+										</a>
+										<a href="" class="list-item">
+											<img src="https://i2.hdslb.com/bfs/face/19539623ddc65b9ae71e8d9bf06a22bd947a9171.jpg@100w_100h.webp">
+											<div class="hhhhover">
+												LIVE
+											</div>
+											<p class="uname">哔哩哔哩LOL赛事直播</p>
+										</a>
+										<a href="" class="list-item">
+											<img src="https://i0.hdslb.com/bfs/face/d7b5e23b8ad7140240fd1ed132c180420ae5b54a.jpg@100w_100h.webp">
+											<div class="hhhhover">
+												LIVE
+											</div>
+											<p class="uname">哔哩哔哩LOL赛事直播</p>
+										</a>
+										<a href="" class="list-item">
+											<img src="https://i0.hdslb.com/bfs/face/f518e3f20ae29414e86c542a42d68ff668ca7fe5.jpg@100w_100h.webp">
+											<div class="hhhhover">
+												LIVE
+											</div>
+											<p class="uname">哔哩哔哩LOL赛事直播</p>
+										</a>
+									   </div>
+									</div>
+									<div class="tttt">
+										<h1>热门活动:</h1>
+										<div class="room-list">
+											<a href="" class="dd"><img src="夏季赛.PNG"></a>
+										</div>
+									</div>
+									
+								</div>
+							</li>
+							<li class="nav-item">
+								<a href="" class="t" title="会员购">
+									<span>会员购
+									</span>
+								</a>
+							</li>
+							<li class="nav-item">
+								<a href="" class="t" title="漫画">
+									<span>漫画
+									</span>
+								</a>
+							</li>
+							<li class="nav-item" id="bml">
+								<a href="" class="t" title="BML">
+									<span>BML
+									</span>
+								</a>
+								<div class="BML">
+									<a href="">
+										<img src="http://i0.hdslb.com/bfs/archive/3e631ccfd626132b8d35c83b2e9aad958b53c0a7.jpg@.webp" style="width: 375px;height: 110px;border-radius: 4px;">
+										<span>BML2019直播预约功能开启</span>
+									</a>
+									<a href="">
+										<img src="http://i0.hdslb.com/bfs/archive/481cfdfc110f57dd8eae1671b4de644e5c6edd4c.jpg@.webp" style="width: 375px;height: 110px;border-radius: 4px;">
+										<span>BW2019 08.16-08.18 首站广州启航</span>
+									</a>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a href="" class="t">
+									<span>70年
+									</span>
+								</a>
+							</li>
+							<li class="nav-item" id="sjxz">
+								<a href="" class="t" title="漫画">
+									<img src="手机图标.PNG" class="phone">
+									<span class="aaa1">下载APP
+									</span>
+								</a>
+								<div class="download">
+									<img src="下载.PNG" class="xiazai">
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="fr">
+						<ul>
+							<li class="nav-right">
+								<a href="">
+									<img src="登录.jpg">
+								</a>
+							</li>
+							<li class="nav-right" id="hover-history">
+								<a href="" style="color: black">
+									<span>历史</span>
+								</a>
+								<div class="history">
+									<div class="top-load">
+										<p class="txt">登录后有更多功能哦~</p>
+										<a href="" class="history-load">登录</a>
+									</div>
+									<ul class="list">
+										<li class="no-data">没有数据哦，多看点视频吧</li>
+									</ul>
+									<div class="more">
+										<a href="" class="more1">查看更多></a>
+									</div>
+								</div>
+							</li>
+							<li class="nav-right nav-right-last" id="hover-tg">
+								<a href="" style="background-color: #f45a8d">
+									<span>投稿
+									</span>
+								</a>
+								<ul class="up-nav">
+									<li>
+										<a href="">
+											<i class="tougao"></i>
+											<span class="tt">专栏投稿</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<i class="tougao1"></i>
+											<span class="tt">音频投稿</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<i class="tougao2"></i>
+											<span class="tt">视频投稿</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<i class="tougao3"></i>
+											<span class="tt">投稿管理</span>
+										</a>
+									</li>
+									<li>
+										<a href="">
+											<i class="tougao4"></i>
+											<span class="tt">创作中心</span>
+										</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+                    
+				</div>
+			</div>
+		</div>
+		<div class="search"  id="hover-head">
+			<div class="search-head">
+				<p class="head-title">
+				    BML直播间向你发来连接邀请
+			    </p>
+			    <div class="main-search">
+			    	<form class="searchform">
+			    		<input type="text" name="" class="searchinput" placeholder="BML直播">
+			    		<button type="submit" class="searchsubmit">
+			    		</button>
+			    	</form>
+				    <a href="" class="link-ranking">
+				    	<span>排行榜</span>
+				    </a>
+			    </div>
+			</div>
+			
+		</div>
+	</div>
+	<div class="bili-wrapper">
+		<div class="bilibili-nav">
+			<ul class="menu">
+				<li class="first-nav">
+					<a href=""><div class="nav-name">首页</div></a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">动画</div>
+					</a>
+					<ul class="sub-nav">
+						<li>
+							<a href="" class="nav-a"><span>MAD·AMV</span><img src="小箭头1.PNG" class="sub-img"></a>
+						</li>
+						<li>
+							<a href="" class="nav-a"><span>MMD·3D</span><img src="小箭头1.PNG" class="sub-img"></a>
+						</li>
+						<li>
+							<a href="" class="nav-a"><span>短片·手书·配音</span><img src="小箭头1.PNG" class="sub-img"></a>
+						</li>
+						<li>
+							<a href="" class="nav-a"><span>特摄</span><img src="小箭头1.PNG" class="sub-img"></a>
+						</li>
+						<li>
+							<a href="" class="nav-a"><span>综合</span><img src="小箭头1.PNG" class="sub-img"></a>
+						</li>
+
+					</ul>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">番剧</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">国创</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">音乐</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">舞蹈</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">游戏</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">科技</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">数码</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">生活</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">鬼畜</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">时尚</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">广告</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">娱乐</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">影视</div>
+					</a>
+				</li>
+				<li class="middle-nav">
+					<a href="">
+						<div class="naw"><span>999+</span></div>
+						<div class="nav-name">放映厅</div>
+					</a>
+				</li>
+				<li class="side-nav first-nav">
+					<a href="">
+						<div class="nav-name">专栏</div>
+					</a>
+				</li>
+				<li class="side-nav side-nav1 first-nav">
+					<a href="">
+						<div class="nav-name">广场</div>
+					</a>
+				</li>
+				<li class="side-nav side-nav2 first-nav">
+					<a href="">
+						<div class="nav-name">直播</div>
+					</a>
+				</li>
+				<li class="side-nav side-nav3 first-nav">
+					<a href="">
+						<div class="nav-name">小黑屋</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+	</script>
+
+</body>
+</html>
