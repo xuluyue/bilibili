@@ -8,6 +8,9 @@
 	margin: 0;
 	padding: 0;
 }
+body{
+	font-size: 12px;
+}
 .header{
 	width: 100%;
 	height: 170px;
@@ -61,6 +64,7 @@ a{
 
 }
 .header .t{
+	line-height: 42px;
 	color: black;
 	height: 100%;
     padding: 0 7px;
@@ -703,13 +707,15 @@ button:hover{
 	width: 980px;
 	margin: 0 auto;
 	position: relative;
+	height: 59px;
 }
 .bilibili-nav{
 	width: 100%;
 	padding-top: 8px;
 	height: 50px;
-	margin-bottom: 1px;
+	margin-bottom: 4px;
 	bottom: 4px;
+	float: left;
 }
 .menu{
 	height: 42px;
@@ -775,7 +781,7 @@ button:hover{
 	box-shadow: 0 2px 4px rgba(0,0,0,.16);
 	left: 0;
 	display: none;
-
+    z-index: 50;
 }
 .sub-nav li {
     position: relative;
@@ -804,7 +810,7 @@ button:hover{
     background-position-x: 7px;
     background-position-y: 8px;
 }
-.sub-nav img {
+.sub-img {
     top: -1px;
     width: 15px;
     height: 15px;
@@ -841,7 +847,7 @@ button:hover{
 	width: 40px;
 	margin: 0 3px;
 }
-.side-nav a{
+.side-nav .zhuanlan {
 	background:url(专栏4.PNG);
     background-repeat: no-repeat;
     background-size: 18px;
@@ -855,12 +861,21 @@ button:hover{
     background-position-x: center;
     background-position-y: 5px;
 }
-.side-nav2 a{
+.side-nav1:hover .sub-nav{
+    display: block;
+}
+.side-nav1:hover .square{
+	color: blue;
+}
+.side-nav2 .zhibo{
 	background:url(直播.PNG);
     background-repeat: no-repeat;
     background-size: 18px;
     background-position-x: center;
     background-position-y: 5px;
+}
+.side-nav2:hover .sub-nav{
+    display: block;
 }
 .side-nav3 a{
 	background:url(直播.PNG);
@@ -868,6 +883,450 @@ button:hover{
     background-size: 18px;
     background-position-x: center;
     background-position-y: 5px;
+}
+.gif{
+	position: absolute;
+	right: 0;
+	top:0;
+	height: 50px;
+	padding: 7px 0;
+}
+.gif img{
+	border-radius: 3px;
+}
+.square-wrap{
+	padding: 20px 0;
+	white-space: nowrap;
+	width: 387px;
+	height: 188px;
+	display: none;
+}
+.square-wrap ul{
+	width: 107px;
+	margin-top: -6px;
+}
+.square-wrap li:first-child{
+	margin-top: 0;
+}
+.square-wrap li{
+	margin-top: 8px;
+	width: 100%;
+	min-width: 107px;
+}
+.square-wrap a {
+    background: none;
+    height: 20px;
+    padding: 2px 10px 2px 18px;
+}
+.square-wrap img{
+	margin-right: 4px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.square-wrap a {
+    background: none;
+    height: 20px;
+    padding: 2px 10px 2px 18px;
+}
+.square-wrap li:hover .square-img{
+	animation: forth 0.2s forwards;
+}
+.square-field{
+	position: absolute;
+	top: 20px;
+	right: 0;
+	display: block;
+	width: 240px;
+	height: 188px;
+	padding: 0 20px 0 19px;
+	border-left: 1px solid #e5e9ef;
+}
+.square-field a{
+    position: relative;
+    width: 240px;
+    height: 84px;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+.square-field img{
+	width: 240px;
+	height: 84px;
+	border-radius: 4px;
+}
+.square-field a:last-child{
+	margin: 0;
+}
+.nav-live{
+	width: 350px;
+	padding: 10px 0;
+}
+.nav-live ul{
+	width: 100px;
+	float: left;
+}
+.nav-live li{
+	min-width: 100px;
+}
+.live-field{
+	padding-left: 20px;
+    width: 210px;
+    height: 220px;
+    border-left: 1px solid #e5e9ef;
+    margin: 10px 0;
+    float: left;
+}
+.live-field a:first-child {
+    margin-bottom: 20px;
+}
+.live-field a {
+    background: none;
+    padding: 0;
+    margin: 0;
+}
+.content{
+	width: 980px;
+	margin: 0 auto;
+}
+.chief-recommend{
+	padding-bottom: 40px;
+	height: 220px;
+}
+.roll-box{
+	width: 440px;
+	height: 220px;
+	float: left;
+}
+.recommend-module{
+	height: 220px;
+	width: 540px;
+	float: left;
+	position: relative;
+	z-index: 8;
+}
+.groom-module{
+	float: left;
+	margin: 0 0 20px 20px;
+	position: relative;
+	overflow: hidden;
+	height: 100px;
+}
+.pic {
+    height: 100px;
+    width: 160px;
+    border-radius: 4px;
+}
+.card {
+    top: 68px;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 150px;
+    font-size: 12px;
+    background: linear-gradient(transparent,rgba(0,0,0,.1) 20%,rgba(0,0,0,.2) 35%,rgba(0,0,0,.6) 65%,rgba(0,0,0,.9));
+    padding: 10px 5px;
+    line-height: 18px;
+    display: block;
+    cursor: pointer;
+}
+.card-title{
+	color: white;
+	height: 40px;
+	overflow: hidden;
+	margin-bottom: 5px;
+	word-break: break-all;
+	word-wrap: break-word;
+}
+.author{
+	color: #99a2aa;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+}
+.box:hover .card{
+    background: rgba(0,0,0,.7);
+    top:0;
+}
+.box:hover .author{
+	animation: myseccond 0.5s;
+}
+@keyframes myseccond{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}
+.watch-latter{
+	width: 22px;
+    height: 22px;
+    position: absolute;
+    right: 6px;
+    bottom: 4px;
+    cursor: pointer;
+    background: url(photo/watch.PNG);
+    display: none;
+}
+.box:hover .watch-latter{
+	display: block;
+}
+.latter{
+	position: absolute;
+	background: #2d2c2cc7;
+    bottom: 30px;
+    right: 0;
+    color: white;
+    font-size: 12px;
+    line-height: 28px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    display: none;
+}
+.recommend-module1{
+	height: 220px;
+	width: 540px;
+	float: left;
+	top: -220px;
+	position: relative;
+}
+.recommend-module2 {
+    height: 220px;
+    width: 540px;
+    top: -440px;
+    position: relative;
+    float: left;
+}
+
+.rec-btn.prev {
+    left: 20px;
+    border-radius: 0 4px 4px 0;
+    padding: 13px 5px 13px 10px;
+    background-position: 6px -1211px;
+}
+.rec-btn.next {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+    padding: 13px 10px 13px 5px;
+    background-position: 25px -1262px;
+}
+.rec-btn {
+	z-index: 10;
+	opacity: 0;
+    position: absolute;
+    background-color: rgba(0,0,0,.6);
+    background-image: url(photo/icons2.PNG);
+    background-repeat: no-repeat;
+    width: 20px;
+    top: 50%;
+    margin-top: -8px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+.recommend-modulell{
+	height: 220px;
+	width: 540px;
+	float: left;
+	position: relative;
+}
+.recommend-modulell:hover .rec-btn{
+	opacity: 1;
+
+}
+.popularize{
+	padding-bottom: 15px;
+	width: 100%;
+	display: inline-block;
+}
+.Icon{
+	width: 720px;
+	float: left;
+}
+.Rcon{
+	width: 260px;
+	float: left;
+}
+.Icon-headline{
+	padding: 0 0 15px;
+	width: 720px;
+	display: inline-block;
+}
+img{
+	border-radius: 4px;
+}
+.icon-t{
+	background:black; 
+	width:40px;
+	height: 40px;
+	float: left;
+	display: inline-block;
+	margin-top: -10px;
+	margin-right: 10px;
+}
+.suggest{
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 400;
+	float: left;
+	margin-right: 20px;
+	position: relative;
+}
+.fire{
+	padding-right: 12px;
+	margin: 7px 0 0 12px;
+	color: #6d757a;
+    float: left;
+    position: relative;
+}
+.fire:hover{
+	color: #00a1d6; 
+}
+.interrupt{
+	float: left;
+}
+.interrupt {
+    float: left;
+    line-height: 28px;
+    font-size: 17px;
+    color: #6d757a;
+    opacity: 0.5;
+}
+.storey-box{
+	height: 168px;
+	overflow: hidden;
+}
+.spread-module{
+	float: left;
+	margin: 0 20px 20px 0;
+	width: 160px;
+	height: 148px;
+	font-size: 12px;
+	overflow: hidden;
+}
+.mask-video{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	background:rgba(0,0,0,.2);
+	display: none; 
+	background-blend-mode:multiply
+}
+.pro1{
+    background-image: url(photo/pro.jpg);
+    background-position: -160px -80px;
+}
+.bbox{
+	width: 100%;
+	height: 100%;
+}
+.t{
+	padding-top: 8px;
+    height: 40px;
+    line-height: 20px;
+    transition: all .2s linear;
+    color: #222;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+    text-align: left;
+}
+.spread1:hover .mask-video{
+    display: block;
+}
+.spread1:hover .t{
+	color: #00a1d6;
+}
+.spread1:hover .watch-latter{
+	display: block;
+}
+.bbbox{
+	width: 160px;
+	height: 100px;
+	position: relative;
+}
+.ad{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.spread2:hover .mask-video{
+    display: block;
+}
+.spread2:hover .t{
+	color: #00a1d6;
+}
+.spread2:hover .watch-latter{
+	display: block;
+}
+.spread3:hover .mask-video{
+    display: block;
+}
+.spread3:hover .t{
+	color: #00a1d6;
+}
+.spread3:hover .watch-latter{
+	display: block;
+}
+.spread4:hover .mask-video{
+    display: block;
+}
+.spread4:hover .t{
+	color: #00a1d6;
+}
+.spread4:hover .watch-latter{
+	display: block;
+}
+.progress{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 10px;
+	width: 100%;
+	background: black;
+	display: none;
+}
+.spread2:hover .progress{
+	display: block;
+}
+.spread3:hover .progress{
+	display: block;
+}
+.spread4:hover .progress{
+	display: block;
+}
+.prgs{
+	position: absolute;
+	height: 2px;
+	margin: 4px 8px;
+	background: #444;
+	width: 144px;
+}
+.innerpg{
+	width: 0px;
+	background: white;
+	height: 100%;
+}
+.dur{
+	position: absolute;
+    bottom: 2px;
+    left: 6px;
+    color: #fff;
+    height: 12px;
+    line-height: 12px;
+    padding: 0 5px 1px 0;
+    transition-property:opacity;
+    transition-duration:0.2s;
+    transition-delay:0.2s;
+    opacity: 0;
+}
+.spread2:hover .dur{
+	opacity: 1;
+}
+.spread3:hover .dur{
+	opacity: 1;
+}
+.spread4:hover .dur{
+	opacity: 1;
 }
 </style>
 </head>
@@ -1261,19 +1720,65 @@ button:hover{
 					</a>
 				</li>
 				<li class="side-nav first-nav">
-					<a href="">
+					<a href="" class="zhuanlan">
 						<div class="nav-name">专栏</div>
 					</a>
 				</li>
 				<li class="side-nav side-nav1 first-nav">
 					<a href="">
-						<div class="nav-name">广场</div>
+						<div class="nav-name square">广场</div>
 					</a>
+					<div class="sub-nav square-wrap">
+						<ul>
+							<li>
+								<a href="" class="square-img"><img src="photo/会员购.PNG"><span>会员购</span></a>
+							</li>
+							<li>
+								<a href="" class="square-img"><img src="photo/game.PNG"><span>游戏中心</span></a>
+							</li>
+							<li>
+								<a href="" class="square-img"><img src="photo/pencil.PNG"><span>会员购</span></a>
+							</li>
+							<li>
+								<a href="" class="square-img"><img src="photo/TV.PNG"><span>会员购</span></a>
+							</li>
+						</ul>
+						<div class="square-field">
+							<a href="" title="bilibili活动"><img src="photo/activity.jpg"></a>
+							<a href="" title="bilibili活动"><img src="photo/topic.jpg"></a>
+						</div>
+					</div>
 				</li>
 				<li class="side-nav side-nav2 first-nav">
-					<a href="">
+					<a href="" class="zhibo">
 						<div class="nav-name">直播</div>
 					</a>
+					<div class="sub-nav nav-live">
+						<ul>
+							<li>
+								<a href="" class="nav-a"><span>全部直播</span><img src="小箭头1.PNG" class="sub-img"></a>
+							</li>
+							<li>
+								<a href="" class="nav-a"><span>游戏直播</span><img src="小箭头1.PNG" class="sub-img"></a>
+							</li>
+							<li>
+								<a href="" class="nav-a"><span>手游直播</span><img src="小箭头1.PNG" class="sub-img"></a>
+							</li>
+							<li>
+								<a href="" class="nav-a"><span>娱乐直播</span><img src="小箭头1.PNG" class="sub-img"></a>
+							</li>
+							<li>
+								<a href="" class="nav-a"><span>电台直播</span><img src="小箭头1.PNG" class="sub-img"></a>
+							</li>
+							<li>
+								<a href="" class="nav-a"><span>绘画直播</span><img src="小箭头1.PNG" class="sub-img"></a>
+							</li>
+						</ul>
+						<div class="live-field">
+							<a href=""><img src="photo/pic.PNG"></a>
+							<a href=""><img src="photo/movie.PNG"></a>
+						</div>
+					</div>
 				</li>
 				<li class="side-nav side-nav3 first-nav">
 					<a href="">
@@ -1282,8 +1787,349 @@ button:hover{
 				</li>
 			</ul>
 		</div>
+		<div class="gif">
+			<img src="gif.gif">
+		</div>
+	</div>
+	<div class="content">
+		<div class="chief-recommend">
+			<div class="roll-box"><!-- <img src="photo/roll1.jpg"> --></div>
+			<div class="recommend-modulell">
+			    <div class="recommend-module" id="week">
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/photo1.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					   </div>
+					   </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						    <img src="photo/photo2.jpg" class="pic">
+					        <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					        </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/photo3.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					    </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/photo4.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					    </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						    <img src="photo/photo5.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					   </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/photo6.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					   </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+			    </div>
+			    <div class="recommend-module1" id="yesterday">
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/pic1.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					   </div>
+					   </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						    <img src="photo/pic2.jpg" class="pic">
+					        <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					        </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/pic3.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					    </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/pic4.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					    </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						    <img src="photo/pic5.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					   </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/pic6.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					   </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+			    </div>
+			    <div class="recommend-module2" id="three">
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/pho1.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					   </div>
+					   </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						    <img src="photo/pho2.jpg" class="pic">
+					        <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					        </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/pho3.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					    </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/pho4.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					    </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						    <img src="photo/pho5.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					   </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+				    <div class="groom-module box">
+					    <a href="" title="【明日方舟】全网首发！五人龙门市区400斩！无法超越的极限！">
+						<img src="photo/pho6.jpg" class="pic">
+					    <div class="card">
+						    <p class="card-title">【官方投稿】泽野弘之 / [-30k]re:tuneS「Call your name 」</p>
+						    <p class="author">up主：澤野弘之_nZk</p>
+						    <p class="author">播放：23.8万</p>
+					   </div>
+					    </a>
+					    <div class="watch-latter kk"></div>
+					    <div class="latter">稍后在看</div>
+				    </div>
+			    </div>
+			    <span class="rec-btn prev" id="threedayclick">三日</span>
+				<span class="rec-btn next" id="yesterdayclick">昨日</span>   
+		    </div>
+		</div>
+		<div class="popularize">
+			<div class="Icon">
+				<div class="Icon-headline">
+					<i class="icon-t"></i>
+					<span class="suggest">推广</span>
+					<a href="" class="fire"><span>万份小龙虾任性送</span></a>
+					<span class="interrupt">|</span>
+					<a href="" class="fire"><span>莽吧！变形兄弟</span></a>
+				</div>
+				<div class="storey-box">
+					<div class="spread-module spread1">
+						<a href="" class="bbox">
+							<div class="bbbox">
+								<img src="photo/box1.jpg">
+								<div class="ad"><img src="photo/ad.PNG"></div>
+							    <div class="mask-video"></div>
+                                <div class="watch-latter kk"></div>
+
+							</div>
+							<p class="t">隐藏在孤岛上的绝密档案是……？</p>
+						</a>
+						
+					</div>
+					<div class="spread-module spread2">
+						<a href="" class="bbox">
+							<div class="bbbox boxx">
+								<img src="photo/box2.jpg">
+							    <div class="mask-video pro1"></div>
+                                <div class="watch-latter kk"></div>
+                                <div class="progress">
+                                	<div class="prgs">
+                                		<div class="innerpg"></div>
+                                	</div>
+                                </div>
+                                <span class="dur" id="during">00:45</span>
+							</div>
+							<p class="t">【灰太狼】青青草原谁最狂？</p>
+						</a>
+					</div>
+					<div class="spread-module spread3">
+						<a href="" class="bbox">
+							<div class="bbbox boxx">
+								<img src="photo/box3.jpg">
+							    <div class="mask-video pro1"></div>
+                                <div class="watch-latter kk"></div>
+                                <div class="progress">
+
+                                	<div class="prgs">
+                                		<div class="innerpg"></div>
+                                	</div>
+                                </div>
+                                <span class="dur" id="during">00:45</span>
+							</div>
+							<p class="t">【灰太狼】青青草原谁最狂？</p>
+						</a>
+					</div>
+					<div class="spread-module spread4">
+						<a href="" class="bbox">
+							<div class="bbbox boxx">
+								<img src="photo/box4.jpg">
+							    <div class="mask-video pro1"></div>
+                                <div class="watch-latter kk"></div>
+                                <div class="progress">
+                                	<div class="prgs">
+                                		<div class="innerpg"></div>
+                                	</div>
+                                </div>
+                                <span class="dur" id="during">00:45</span>
+							</div>
+							<p class="t">【灰太狼】青青草原谁最狂？</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="Rcon"></div>
+		</div>
 	</div>
 	<script type="text/javascript">
+		var boxx=document.getElementsByClassName('boxx')
+		var innerpg=document.getElementsByClassName('innerpg')
+		for (let i = 0; i < boxx.length; i++) {
+			boxx[i].onmousemove=function(e)
+			{
+				console.log(i);
+				e=e||window.event;
+			    console.log(e.offsetX);
+			    var move=e.offsetX-16;
+		    	innerpg[i].style.width=move+'px'
+		    }
+		    		
+		  //   boxx[i] .onmousemove=function(num){
+		  //   	return function(){
+			 //        console.log(num)
+			 //        people(num);
+			    //innerpg[i].style.width=move+'px'
+				// }
+		  //   }(i)
+		   
+		    boxx[i].onmouseout=function(num)
+		    {
+		    	return function(){
+		    		innerpg[num].style.width=0;
+		    	}
+			    
+		    }(i)
+		}
+		
+		var during=document.getElementById('during')
+		
 	</script>
 
 </body>
